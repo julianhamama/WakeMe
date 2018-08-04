@@ -13,7 +13,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     var ref: DatabaseReference!
-    var player: AVAudioPlayer!
+    public static var player: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +31,17 @@ class ViewController: UIViewController {
 
     
     @IBAction func newAlarmAction(_ sender: Any) {
-        playSound()
+        ViewController.playSound()
     }
    
+     static func pauseSound() {
+        if player != nil {
+            player.pause();
+        }
+    }
     
-    func playSound() {
-        let path = Bundle.main.path(forResource: "Alarm Sound 1", ofType: "mp3")!
+    static func playSound() {
+        let path = Bundle.main.path(forResource: "Alarm Sound 2", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         
         do{

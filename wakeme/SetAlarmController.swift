@@ -12,6 +12,9 @@ class SetAlarmController: UIViewController {
 
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBAction func back(_ sender: Any) {
+        ViewController.player.stop()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
