@@ -67,6 +67,7 @@ class ViewController: UIViewController {
         ref = Database.database().reference()
         
         jeffTest()
+        jeffsFinalStand()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -126,7 +127,7 @@ class ViewController: UIViewController {
     
     func jeffTest() {
         
-        
+        /*
         for i in 0...3 {
             let alarmRect = UIView(frame: CGRect(x: 0, y: i * 70, width: Int(AlarmScreen.frame.size.width), height: 60))
             alarmRect.layer.cornerRadius = 10
@@ -158,7 +159,122 @@ class ViewController: UIViewController {
         
         
         AlarmScreen.contentSize = CGSize(width: Int(AlarmScreen.frame.size.width), height: 440)
+        */
+        
+        let alarmRect = UIView(frame: CGRect(x: 0, y: 0, width: Int(AlarmScreen.frame.size.width), height: 100))
+        alarmRect.layer.cornerRadius = 10
+        alarmRect.backgroundColor = UIColor.gray
+        
+        let alarmTime = UILabel()
+        alarmTime.frame.origin.x = 15
+        alarmTime.frame.origin.y = 5
+        alarmTime.font = alarmTime.font.withSize(24)
+        alarmRect.addSubview(alarmTime)
+        
+        self.ref.child("bob_alarm").child("date").observe(.value, with: { (snapshot) in
+            alarmTime.text = snapshot.value as? String
+            alarmTime.sizeToFit()
+        })
+        
+        let descLabel = UILabel()
+        descLabel.frame.origin.x = 15
+        descLabel.frame.origin.y = 30
+        descLabel.font = descLabel.font.withSize(18)
+        alarmRect.addSubview(descLabel)
+        
+        self.ref.child("bob_alarm").child("desc").observe(.value, with: { (snapshot) in
+            descLabel.text = snapshot.value as? String
+            descLabel.sizeToFit()
+        })
+        
+        
+        
+        AlarmScreen.addSubview(alarmRect)
+
     }
+    
+    func accept(_ sender: UIButton) {
+        AlarmScreen.subviews.forEach({ $0.removeFromSuperview() })
+        
+        jeffTest()
+        
+    }
+    
+    func decline(_ sender: UIButton) {
+        print("booooooop")
+    }
+    
+    func jeffsHelper(timer: Timer) {
+        ref.child("bob_alarm").child("confirmed").observe(.value, with: { (snapshot) in
+            let temp = snapshot.value as? String
+            
+            print(temp)
+            
+            if (temp == "0") {
+                self.ref.child("bob_alarm").child("confirmed").setValue("1")
+                
+                let alarmRect = UIView(frame: CGRect(x: 0, y: 0, width: Int(self.AlarmScreen.frame.size.width), height: 100))
+                alarmRect.layer.cornerRadius = 10
+                alarmRect.backgroundColor = UIColor.gray
+                
+                let alarmTime = UILabel()
+                alarmTime.frame.origin.x = 15
+                alarmTime.frame.origin.y = 5
+                alarmTime.font = alarmTime.font.withSize(24)
+                alarmRect.addSubview(alarmTime)
+                
+                self.ref.child("bob_alarm").child("date").observe(.value, with: { (snapshot) in
+                    alarmTime.text = snapshot.value as? String
+                    alarmTime.sizeToFit()
+                })
+                
+                
+                let descLabel = UILabel()
+                descLabel.frame.origin.x = 15
+                descLabel.frame.origin.y = 30
+                descLabel.font = descLabel.font.withSize(18)
+                alarmRect.addSubview(descLabel)
+                
+                self.ref.child("bob_alarm").child("desc").observe(.value, with: { (snapshot) in
+                    descLabel.text = snapshot.value as? String
+                    descLabel.sizeToFit()
+                })
+                
+                let acceptButton = UIButton(frame: CGRect(x: 0, y: 0, width: Int(self.AlarmScreen.frame.size.width / 2), height: 30))
+                acceptButton.setTitle("Accept", for: UIControlState.normal)
+                acceptButton.frame.origin.x = 0
+                acceptButton.frame.origin.y = 70
+                acceptButton.addTarget(self, action: #selector(self.accept), for: UIControlEvents.touchUpInside)
+                acceptButton.backgroundColor = UIColor.green
+                alarmRect.addSubview(acceptButton)
+                
+                
+                let declineButton = UIButton(frame: CGRect(x: 0, y: 0, width: Int(self.AlarmScreen.frame.size.width / 2), height: 30))
+                declineButton.setTitle("Decline", for: UIControlState.normal)
+                declineButton.frame.origin.x = self.AlarmScreen.frame.size.width / 2
+                declineButton.frame.origin.y = 70
+                declineButton.addTarget(self, action: #selector(self.decline), for: UIControlEvents.touchUpInside)
+                declineButton.backgroundColor = UIColor.red
+                alarmRect.addSubview(declineButton)
+                
+                
+                self.AlarmScreen.addSubview(alarmRect)
+
+            } else {
+                //self.jeffTest()
+            }
+            
+        })
+    }
+    
+    func jeffsFinalStand() {
+        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+            timer in
+            
+            self.jeffsHelper(timer: timer)
+        }
+    }
+    
     
     
 }
