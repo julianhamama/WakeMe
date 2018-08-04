@@ -1,5 +1,5 @@
 //
-//  SetAlarmController.swift
+//  Game.swift
 //  wakeme
 //
 //  Created by Will Lawless on 4/8/18.
@@ -8,17 +8,15 @@
 
 import UIKit
 
-class SetAlarmController: UIViewController {
+class Game: UIViewController {
 
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var Button1: UIButton!
+    @IBOutlet weak var Button2: UIButton!
     
-    @IBOutlet weak var SetAlarmButton: UIButton!
-    @IBAction func back(_ sender: Any) {
-        ViewController.player.stop()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        SetAlarmButton.layer.cornerRadius=25
+        Button1.layer.cornerRadius=25
+        Button2.layer.cornerRadius=25
         // Do any additional setup after loading the view.
     }
 
@@ -28,8 +26,6 @@ class SetAlarmController: UIViewController {
     }
     
 
-    @IBAction func setAlarm(_ sender: Any) {
-    }
     /*
     // MARK: - Navigation
 

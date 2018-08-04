@@ -12,11 +12,28 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var NewAlarmButton: UIButton!
+    @IBOutlet weak var FriendsButton: UIButton!
+    @IBOutlet weak var BadgesButton: UIButton!
+    @IBOutlet weak var NewsfeedButton: UIButton!
+    @IBOutlet weak var LeaderboardButton: UIButton!
     var ref: DatabaseReference!
     public static var player: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NewAlarmButton.layer.cornerRadius=25
+        NewAlarmButton.layer.borderWidth=2
+        NewAlarmButton.layer.shadowOpacity=0.8
+        NewAlarmButton.layer.borderColor=UIColor.clear.cgColor
+        NewAlarmButton.layer.shadowColor=UIColor.red.cgColor
+        NewAlarmButton.layer.shadowOffset=CGSize(width: 5, height: 5)
+        FriendsButton.layer.cornerRadius=25
+        BadgesButton.layer.cornerRadius=25
+        NewsfeedButton.layer.cornerRadius=25
+        LeaderboardButton.layer.cornerRadius=25
         
         ref = Database.database().reference()
         
