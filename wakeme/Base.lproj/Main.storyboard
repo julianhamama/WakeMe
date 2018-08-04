@@ -6,12 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wakeme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -21,9 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smd-5f-Uof">
-                                <rect key="frame" x="42" y="402" width="291" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smd-5f-Uof">
+                                <rect key="frame" x="40" y="252" width="293" height="65"/>
                                 <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                 <state key="normal" title="New Alarm">
@@ -33,54 +34,124 @@
                                     <segue destination="rvS-ir-06t" kind="show" id="hM1-IE-ax2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXY-Zv-PmB">
-                                <rect key="frame" x="42" y="556" width="133" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Newsfeed">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X65-E6-vqW">
+                                <rect key="frame" x="221" y="577" width="112" height="44"/>
+                                <color key="backgroundColor" red="0.67450980392156867" green="0.0" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="Izc-mS-max"/>
+                                    <constraint firstAttribute="height" constant="44" id="UEG-gK-4hG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGz-iz-hrc">
-                                <rect key="frame" x="42" y="604" width="133" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC9-iS-oqk">
+                                <rect key="frame" x="40" y="577" width="112" height="44"/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="HG5-jP-NUk"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="Lt6-pa-jF5"/>
+                                    <constraint firstAttribute="height" constant="44" id="Nzj-s7-Hfy"/>
+                                    <constraint firstAttribute="width" constant="112" id="rFx-HP-yh2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eec-db-6vB">
+                                <rect key="frame" x="40" y="519" width="112" height="44"/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="7sB-V6-D6g"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="APy-5Z-Hmh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Ihn-du-WZo"/>
+                                    <constraint firstAttribute="width" constant="112" id="PkI-F6-9fw"/>
+                                    <constraint firstAttribute="height" constant="44" id="gnj-gn-Qhz"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="112" id="no2-aA-lPT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-3B-qWw">
+                                <rect key="frame" x="221" y="519" width="112" height="44"/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="Q2S-VJ-Pqs"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="X1M-KM-ow3"/>
+                                    <constraint firstAttribute="height" constant="44" id="XM8-d0-GJ9"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="112" id="sw8-5c-Lbs"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="yiM-z6-a0d"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="zmF-aO-SPv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="smd-5f-Uof" secondAttribute="trailing" constant="40" id="1xM-hT-Aj7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m0Q-3B-qWw" secondAttribute="trailing" constant="26" id="3sv-dF-c6r"/>
+                            <constraint firstItem="smd-5f-Uof" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-42" id="47E-U4-zrr"/>
+                            <constraint firstItem="X65-E6-vqW" firstAttribute="top" secondItem="m0Q-3B-qWw" secondAttribute="bottom" constant="14" id="6g7-eQ-mt9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X65-E6-vqW" secondAttribute="bottom" constant="46" id="9ua-Hz-2OF"/>
+                            <constraint firstItem="pC9-iS-oqk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="BD9-VI-FYJ"/>
+                            <constraint firstAttribute="trailing" secondItem="smd-5f-Uof" secondAttribute="trailing" constant="42" id="IUd-2l-y26"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pC9-iS-oqk" secondAttribute="bottom" constant="46" id="Ivm-go-sO7"/>
+                            <constraint firstAttribute="trailing" secondItem="smd-5f-Uof" secondAttribute="trailing" constant="42" id="Yqk-BY-QJt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X65-E6-vqW" secondAttribute="trailing" constant="26" id="Yrt-bE-qeN"/>
+                            <constraint firstItem="pC9-iS-oqk" firstAttribute="top" secondItem="eec-db-6vB" secondAttribute="bottom" constant="14" id="a8D-3Q-Urv"/>
+                            <constraint firstItem="eec-db-6vB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="coQ-rQ-MMr"/>
+                            <constraint firstItem="smd-5f-Uof" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="x2O-M3-0ji"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="35.625" y="32.74647887323944"/>
+        </scene>
+        <!--Badges-->
+        <scene sceneID="t7b-ap-urg">
+            <objects>
+                <viewController title="Badges" id="jyZ-Px-CXb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cCw-RU-9XV"/>
+                        <viewControllerLayoutGuide type="bottom" id="e9P-pY-Zgu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mlu-rD-0Ne">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olD-Pr-rxG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="Badges">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="setAlarm:" destination="rvS-ir-06t" eventType="touchUpInside" id="O3J-Lf-gFr"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldz-zm-aSx">
-                                <rect key="frame" x="200" y="556" width="133" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Leaderboard">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkm-4g-VCU">
-                                <rect key="frame" x="200" y="604" width="133" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Friends">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42Z-u2-5l4">
+                                <rect key="frame" x="16" y="35" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="H">
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="olD-Pr-rxG" firstAttribute="leading" secondItem="mlu-rD-0Ne" secondAttribute="leading" id="2it-LE-e52"/>
+                            <constraint firstAttribute="trailing" secondItem="olD-Pr-rxG" secondAttribute="trailing" id="Pj6-Ha-4oQ"/>
+                            <constraint firstItem="42Z-u2-5l4" firstAttribute="leading" secondItem="mlu-rD-0Ne" secondAttribute="leadingMargin" id="RZL-pl-A7K"/>
+                            <constraint firstItem="olD-Pr-rxG" firstAttribute="top" secondItem="cCw-RU-9XV" secondAttribute="bottom" constant="8" id="UHN-cG-WMf"/>
+                            <constraint firstItem="42Z-u2-5l4" firstAttribute="top" secondItem="cCw-RU-9XV" secondAttribute="bottom" constant="15" id="luy-oz-i1n"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTl-x7-lKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="33.733133433283363"/>
+            <point key="canvasLocation" x="20.625" y="762.67605633802816"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Alarm Controller-->
         <scene sceneID="jGa-zZ-2Xq">
             <objects>
-                <viewController id="rvS-ir-06t" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icy-oa-AgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="rvS-ir-06t" customClass="SetAlarmController" customModule="wakeme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zsr-ot-Woj"/>
                         <viewControllerLayoutGuide type="bottom" id="suV-S9-ewe"/>
@@ -88,12 +159,168 @@
                     <view key="view" contentMode="scaleToFill" id="F67-Er-bZF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5I-lO-7uI">
+                                <rect key="frame" x="42" y="562" width="291" height="65"/>
+                                <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                <state key="normal" title="Set Alarm">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAlarm:" destination="rvS-ir-06t" eventType="touchUpInside" id="P68-hC-RjB"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IXn-Eo-ulk">
+                                <rect key="frame" x="42" y="99" width="291" height="125"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="mHo-b4-cRN"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="555070493.59997797">
+                                    <!--2018-08-04 10:14:53 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZI-NT-U3a">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="New Alarm">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAlarm:" destination="rvS-ir-06t" eventType="touchUpInside" id="Wmx-H0-Hn0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3I-tg-B4I">
+                                <rect key="frame" x="16" y="35" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="H">
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="elm-nd-qzg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="p5I-lO-7uI" secondAttribute="trailing" constant="26" id="3z1-ST-s9e"/>
+                            <constraint firstItem="p5I-lO-7uI" firstAttribute="leading" secondItem="F67-Er-bZF" secondAttribute="leadingMargin" constant="26" id="7sU-Pe-aT9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IXn-Eo-ulk" secondAttribute="trailing" constant="26" id="8rA-eq-8A0"/>
+                            <constraint firstItem="R3I-tg-B4I" firstAttribute="leading" secondItem="F67-Er-bZF" secondAttribute="leadingMargin" id="DeR-h9-DuZ"/>
+                            <constraint firstItem="bZI-NT-U3a" firstAttribute="leading" secondItem="F67-Er-bZF" secondAttribute="leading" id="F0y-W6-M0r"/>
+                            <constraint firstItem="bZI-NT-U3a" firstAttribute="top" secondItem="zsr-ot-Woj" secondAttribute="bottom" constant="8" id="Kyr-k6-yj4"/>
+                            <constraint firstItem="suV-S9-ewe" firstAttribute="top" secondItem="p5I-lO-7uI" secondAttribute="bottom" constant="40" id="Uf2-Yb-pmc"/>
+                            <constraint firstItem="IXn-Eo-ulk" firstAttribute="leading" secondItem="F67-Er-bZF" secondAttribute="leadingMargin" constant="26" id="Umu-QO-0vC"/>
+                            <constraint firstItem="IXn-Eo-ulk" firstAttribute="top" secondItem="bZI-NT-U3a" secondAttribute="bottom" constant="27" id="bAu-hs-ug7"/>
+                            <constraint firstItem="R3I-tg-B4I" firstAttribute="top" secondItem="zsr-ot-Woj" secondAttribute="bottom" constant="15" id="cwb-0e-t6c"/>
+                            <constraint firstAttribute="trailing" secondItem="bZI-NT-U3a" secondAttribute="trailing" id="x6I-Ro-5sK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="IXn-Eo-ulk" id="jgU-Oe-Ck1"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="903.75" y="32.74647887323944"/>
+        </scene>
+        <!--Leaderboard-->
+        <scene sceneID="zZM-hN-4EM">
+            <objects>
+                <viewController title="Leaderboard" id="gqe-9C-N06" customClass="Leaderboard" customModule="wakeme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Yz-qc-ynt"/>
+                        <viewControllerLayoutGuide type="bottom" id="l8z-Fq-C5P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NTj-aU-pTQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh2-5L-0qC">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="New Alarm">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAlarm:" destination="rvS-ir-06t" eventType="touchUpInside" id="92I-Et-wpC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFv-ef-A8t">
+                                <rect key="frame" x="16" y="35" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="H">
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="byf-2B-siR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uh2-5L-0qC" firstAttribute="leading" secondItem="NTj-aU-pTQ" secondAttribute="leading" id="76P-oW-95m"/>
+                            <constraint firstItem="EFv-ef-A8t" firstAttribute="leading" secondItem="NTj-aU-pTQ" secondAttribute="leadingMargin" id="8zK-p7-6Sb"/>
+                            <constraint firstAttribute="trailing" secondItem="Uh2-5L-0qC" secondAttribute="trailing" id="D6u-zE-KPD"/>
+                            <constraint firstItem="EFv-ef-A8t" firstAttribute="top" secondItem="4Yz-qc-ynt" secondAttribute="bottom" constant="15" id="IDx-sT-NbK"/>
+                            <constraint firstItem="Uh2-5L-0qC" firstAttribute="top" secondItem="4Yz-qc-ynt" secondAttribute="bottom" constant="8" id="SNO-I7-4fV"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Icy-oa-AgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WV4-E3-x5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="34"/>
+            <point key="canvasLocation" x="1695" y="32.74647887323944"/>
+        </scene>
+        <!--News Feed-->
+        <scene sceneID="PzF-oh-Fft">
+            <objects>
+                <viewController title="News Feed" id="neq-fA-0HP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hU0-dr-aJl"/>
+                        <viewControllerLayoutGuide type="bottom" id="1C9-9p-Dta"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RcX-L9-oKB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jA7-a6-NfI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Newsfeed">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAlarm:" destination="rvS-ir-06t" eventType="touchUpInside" id="I1m-rh-vt9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tA-Ot-DEu">
+                                <rect key="frame" x="16" y="35" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="H">
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="UBk-Y5-25b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.00034407383420000001" green="3.0453572240000003e-07" blue="3.3543494160000002e-05" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1tA-Ot-DEu" firstAttribute="leading" secondItem="RcX-L9-oKB" secondAttribute="leadingMargin" id="Zk6-6F-X6p"/>
+                            <constraint firstItem="1tA-Ot-DEu" firstAttribute="top" secondItem="hU0-dr-aJl" secondAttribute="bottom" constant="15" id="sBH-xz-WEA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJr-CM-SYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482" y="34"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UBk-Y5-25b"/>
+    </inferredMetricsTieBreakers>
 </document>

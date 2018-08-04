@@ -14,6 +14,10 @@
 		0066A95421159D46001E0A3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0066A95221159D46001E0A3B /* LaunchScreen.storyboard */; };
 		0066A95E2115AFBA001E0A3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0066A95D2115AFBA001E0A3B /* GoogleService-Info.plist */; };
 		16BCD4C5DD96855CBE22218A /* Pods_wakeme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EEB8FD2D285A736ECE0004 /* Pods_wakeme.framework */; };
+		2FAD9DCC2115B2BA008694E1 /* SetAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD9DCB2115B2BA008694E1 /* SetAlarmController.swift */; };
+		2FAD9DCE2115B5DA008694E1 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD9DCD2115B5DA008694E1 /* Leaderboard.swift */; };
+		2FAD9DD02115B739008694E1 /* Newsfeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD9DCF2115B739008694E1 /* Newsfeed.swift */; };
+		2FAD9DD22115B862008694E1 /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD9DD12115B862008694E1 /* Badges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		0066A95321159D46001E0A3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0066A95521159D46001E0A3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0066A95D2115AFBA001E0A3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2FAD9DCB2115B2BA008694E1 /* SetAlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmController.swift; sourceTree = "<group>"; };
+		2FAD9DCD2115B5DA008694E1 /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
+		2FAD9DCF2115B739008694E1 /* Newsfeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Newsfeed.swift; sourceTree = "<group>"; };
+		2FAD9DD12115B862008694E1 /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
 		56EEB8FD2D285A736ECE0004 /* Pods_wakeme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wakeme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		866D0D21A63EA8656418141E /* Pods-wakeme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wakeme/Pods-wakeme.debug.xcconfig"; sourceTree = "<group>"; };
 		A44AB77F7FCCB5EAD4ED0E32 /* Pods-wakeme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeme.release.xcconfig"; path = "Pods/Target Support Files/Pods-wakeme/Pods-wakeme.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +78,10 @@
 				0066A95221159D46001E0A3B /* LaunchScreen.storyboard */,
 				0066A95521159D46001E0A3B /* Info.plist */,
 				0066A95D2115AFBA001E0A3B /* GoogleService-Info.plist */,
+				2FAD9DCB2115B2BA008694E1 /* SetAlarmController.swift */,
+				2FAD9DCD2115B5DA008694E1 /* Leaderboard.swift */,
+				2FAD9DCF2115B739008694E1 /* Newsfeed.swift */,
+				2FAD9DD12115B862008694E1 /* Badges.swift */,
 			);
 			path = wakeme;
 			sourceTree = "<group>";
@@ -210,7 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0066A94C21159D46001E0A3B /* ViewController.swift in Sources */,
+				2FAD9DD02115B739008694E1 /* Newsfeed.swift in Sources */,
+				2FAD9DCE2115B5DA008694E1 /* Leaderboard.swift in Sources */,
+				2FAD9DD22115B862008694E1 /* Badges.swift in Sources */,
 				0066A94A21159D46001E0A3B /* AppDelegate.swift in Sources */,
+				2FAD9DCC2115B2BA008694E1 /* SetAlarmController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
