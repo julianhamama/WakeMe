@@ -37,7 +37,6 @@ class SetAlarmController: UIViewController {
         UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.90)}, completion: {finish in UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform.identity})})
     }
     
-    @IBAction func setAlarm(_ sender: Any) {
     
     @IBAction func setAlarm(_ sender: Any) {
         let date1 = Date().addingTimeInterval(5)

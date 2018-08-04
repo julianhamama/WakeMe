@@ -10,6 +10,8 @@ import UIKit
 
 class Badges: UIViewController {
 
+    @IBOutlet weak var Bird: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
