@@ -12,6 +12,7 @@
 		0066A94F21159D46001E0A3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0066A94D21159D46001E0A3B /* Main.storyboard */; };
 		0066A95121159D46001E0A3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0066A95021159D46001E0A3B /* Assets.xcassets */; };
 		0066A95421159D46001E0A3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0066A95221159D46001E0A3B /* LaunchScreen.storyboard */; };
+		0066A95E2115AFBA001E0A3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0066A95D2115AFBA001E0A3B /* GoogleService-Info.plist */; };
 		16BCD4C5DD96855CBE22218A /* Pods_wakeme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EEB8FD2D285A736ECE0004 /* Pods_wakeme.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		0066A95021159D46001E0A3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0066A95321159D46001E0A3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0066A95521159D46001E0A3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0066A95D2115AFBA001E0A3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		56EEB8FD2D285A736ECE0004 /* Pods_wakeme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wakeme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		866D0D21A63EA8656418141E /* Pods-wakeme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wakeme/Pods-wakeme.debug.xcconfig"; sourceTree = "<group>"; };
 		A44AB77F7FCCB5EAD4ED0E32 /* Pods-wakeme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeme.release.xcconfig"; path = "Pods/Target Support Files/Pods-wakeme/Pods-wakeme.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				0066A95021159D46001E0A3B /* Assets.xcassets */,
 				0066A95221159D46001E0A3B /* LaunchScreen.storyboard */,
 				0066A95521159D46001E0A3B /* Info.plist */,
+				0066A95D2115AFBA001E0A3B /* GoogleService-Info.plist */,
 			);
 			path = wakeme;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0066A95421159D46001E0A3B /* LaunchScreen.storyboard in Resources */,
+				0066A95E2115AFBA001E0A3B /* GoogleService-Info.plist in Resources */,
 				0066A95121159D46001E0A3B /* Assets.xcassets in Resources */,
 				0066A94F21159D46001E0A3B /* Main.storyboard in Resources */,
 			);
@@ -368,6 +372,7 @@
 				0066A95A21159D46001E0A3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
