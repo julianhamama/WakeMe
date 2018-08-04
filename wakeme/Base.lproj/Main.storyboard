@@ -119,7 +119,7 @@
                                     <segue destination="D51-IL-nnt" kind="show" id="mHz-Pu-4lj"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrH-md-MdF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrH-md-MdF">
                                 <rect key="frame" x="16" y="61" width="343" height="308"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
@@ -164,16 +164,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olD-Pr-rxG">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="Badges">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="setAlarm:" destination="rvS-ir-06t" eventType="touchUpInside" id="O3J-Lf-gFr"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EN-Kf-aDF">
+                                <rect key="frame" x="26" y="301" width="136" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Fire.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMN-s7-vv3">
+                                <rect key="frame" x="206" y="301" width="136" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="DumbBell.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLa-dl-lzn">
+                                <rect key="frame" x="206" y="119" width="136" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Clock.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4L-aI-YNc">
+                                <rect key="frame" x="206" y="490" width="136" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="100.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-fd-G9x">
+                                <rect key="frame" x="26" y="490" width="136" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Owl.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzK-a3-ZtC">
                                 <rect key="frame" x="16" y="36" width="32" height="28"/>
@@ -187,18 +201,43 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="HXR-at-9CR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olD-Pr-rxG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Badges">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setAlarm:" destination="rvS-ir-06t" eventType="touchUpInside" id="O3J-Lf-gFr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxp-Vo-Khu">
+                                <rect key="frame" x="26" y="119" width="136" height="136"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="bQC-Qi-Vmf"/>
+                                    <constraint firstAttribute="height" constant="136" id="nPa-L4-2Tj"/>
+                                </constraints>
+                                <state key="normal" image="Bird.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="olD-Pr-rxG" firstAttribute="leading" secondItem="mlu-rD-0Ne" secondAttribute="leading" id="2it-LE-e52"/>
                             <constraint firstAttribute="trailing" secondItem="olD-Pr-rxG" secondAttribute="trailing" id="Pj6-Ha-4oQ"/>
                             <constraint firstItem="olD-Pr-rxG" firstAttribute="top" secondItem="cCw-RU-9XV" secondAttribute="bottom" constant="8" id="UHN-cG-WMf"/>
+                            <constraint firstItem="Vxp-Vo-Khu" firstAttribute="leading" secondItem="mlu-rD-0Ne" secondAttribute="leadingMargin" constant="10" id="YYr-fe-jk8"/>
+                            <constraint firstItem="Vxp-Vo-Khu" firstAttribute="top" secondItem="olD-Pr-rxG" secondAttribute="bottom" constant="47" id="r60-Eq-XHU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Bird" destination="Vxp-Vo-Khu" id="3z3-nD-xYc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DTl-x7-lKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.625" y="762.67605633802816"/>
+            <point key="canvasLocation" x="33" y="762"/>
         </scene>
         <!--Friends-->
         <scene sceneID="5Hg-6o-76d">
@@ -298,13 +337,6 @@
                                     <action selector="ButtonPress2:" destination="D51-IL-nnt" eventType="touchUpInside" id="tWt-fk-wht"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToG-jz-nBn">
-                                <rect key="frame" x="117" y="367" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7k-Hn-mr2">
                                 <rect key="frame" x="16" y="36" width="32" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -372,7 +404,7 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3I-tg-B4I">
-                                <rect key="frame" x="16" y="36" width="32" height="28"/>
+                                <rect key="frame" x="16" y="35" width="32" height="28"/>
                                 <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="UN0-0k-e4k"/>
@@ -464,7 +496,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="bFS-Y7-ZNL"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qd-v7-KcG">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qd-v7-KcG">
                                 <rect key="frame" x="22" y="98" width="331" height="529"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
@@ -530,9 +562,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="100.png" width="509" height="515"/>
+        <image name="Bird.png" width="509" height="515"/>
+        <image name="Clock.png" width="509" height="515"/>
+        <image name="DumbBell.png" width="509" height="515"/>
+        <image name="Fire.png" width="509" height="515"/>
+        <image name="Owl.png" width="509" height="515"/>
         <image name="home.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bFS-Y7-ZNL"/>
+        <segue reference="HXR-at-9CR"/>
     </inferredMetricsTieBreakers>
 </document>

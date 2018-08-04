@@ -23,6 +23,7 @@
 		2FAD9DDA2115D322008694E1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD9DD92115D322008694E1 /* Game.swift */; };
 		2FAD9DDC2115E216008694E1 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD9DDB2115E215008694E1 /* home.png */; };
 		2FAD9DDE2115E27A008694E1 /* 27754.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD9DDD2115E27A008694E1 /* 27754.png */; };
+		2FAD9DE02115FD6B008694E1 /* Badge Icons in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD9DDF2115FD6A008694E1 /* Badge Icons */; };
 		B9EAC2452115BEA100E20F1A /* Alarm Sound 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9EAC2432115BEA100E20F1A /* Alarm Sound 2.mp3 */; };
 		B9EAC2462115BEA100E20F1A /* Alarm Sound 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9EAC2442115BEA100E20F1A /* Alarm Sound 1.mp3 */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		2FAD9DD92115D322008694E1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		2FAD9DDB2115E215008694E1 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		2FAD9DDD2115E27A008694E1 /* 27754.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 27754.png; sourceTree = "<group>"; };
+		2FAD9DDF2115FD6A008694E1 /* Badge Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Badge Icons"; path = "Kiel's Shit/Badge Icons"; sourceTree = SOURCE_ROOT; };
 		56EEB8FD2D285A736ECE0004 /* Pods_wakeme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wakeme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		866D0D21A63EA8656418141E /* Pods-wakeme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wakeme/Pods-wakeme.debug.xcconfig"; sourceTree = "<group>"; };
 		A44AB77F7FCCB5EAD4ED0E32 /* Pods-wakeme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakeme.release.xcconfig"; path = "Pods/Target Support Files/Pods-wakeme/Pods-wakeme.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				2FAD9DD52115C63D008694E1 /* Alarm Sound 1.mp3 */,
 				2FAD9DDD2115E27A008694E1 /* 27754.png */,
 				2FAD9DDB2115E215008694E1 /* home.png */,
+				2FAD9DDF2115FD6A008694E1 /* Badge Icons */,
 				2FAD9DD62115C63D008694E1 /* Alarm Sound 2.mp3 */,
 				0066A95021159D46001E0A3B /* Assets.xcassets */,
 				0066A95221159D46001E0A3B /* LaunchScreen.storyboard */,
@@ -193,6 +196,7 @@
 				0066A9622115B639001E0A3B /* (null) in Resources */,
 				0066A95421159D46001E0A3B /* LaunchScreen.storyboard in Resources */,
 				0066A95E2115AFBA001E0A3B /* GoogleService-Info.plist in Resources */,
+				2FAD9DE02115FD6B008694E1 /* Badge Icons in Resources */,
 				0066A95121159D46001E0A3B /* Assets.xcassets in Resources */,
 				B9EAC2462115BEA100E20F1A /* Alarm Sound 1.mp3 in Resources */,
 				0066A94F21159D46001E0A3B /* Main.storyboard in Resources */,

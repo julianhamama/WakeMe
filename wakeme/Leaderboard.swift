@@ -30,14 +30,14 @@ class Leaderboard: UIViewController {
     func jeffTest() {
         
         
-        for i in 0...10 {
-            let alarmRect = UIView(frame: CGRect(x: 0, y: i * 110, width: Int(Leaderboard.frame.size.width), height: 100))
+        for i in 0...9 {
+            let alarmRect = UIView(frame: CGRect(x: 0, y: i * 70, width: Int(Leaderboard.frame.size.width), height: 60))
             alarmRect.layer.cornerRadius = 10
             alarmRect.backgroundColor = UIColor.gray
             
             let alarmTime = UILabel()
             alarmTime.frame.origin.x = 15
-            alarmTime.frame.origin.y = 15
+            alarmTime.frame.origin.y = 5
             alarmTime.font = alarmTime.font.withSize(24)
             alarmTime.text = "1st"
             alarmTime.sizeToFit()
@@ -45,7 +45,7 @@ class Leaderboard: UIViewController {
             
             let descLabel = UILabel()
             descLabel.frame.origin.x = 15
-            descLabel.frame.origin.y = 50
+            descLabel.frame.origin.y = 30
             descLabel.font = descLabel.font.withSize(18)
             alarmRect.addSubview(descLabel)
             
