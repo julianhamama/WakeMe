@@ -19,7 +19,16 @@ class Game: UIViewController {
         Button2.layer.cornerRadius=25
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    @IBAction func Button1Press(_ sender: UIButton) {
+        UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.90)}, completion: {finish in UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform.identity})})
+    }
+    
+    
+    @IBAction func ButtonPress2(_ sender: UIButton) {
+        UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.90)}, completion: {finish in UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform.identity})})
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
