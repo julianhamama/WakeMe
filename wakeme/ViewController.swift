@@ -12,6 +12,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var AlarmScreen: UIScrollView!
     
     @IBOutlet weak var NewAlarmButton: UIButton!
     @IBOutlet weak var FriendsButton: UIButton!

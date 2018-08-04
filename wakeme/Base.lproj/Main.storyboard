@@ -37,6 +37,21 @@
                                     <segue destination="jyZ-Px-CXb" kind="show" id="P5Y-4H-SKi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbH-vL-LoE">
+                                <rect key="frame" x="16" y="540" width="135" height="44"/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="4fC-ew-FZv"/>
+                                    <constraint firstAttribute="height" constant="44" id="isG-Te-W6m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Leaderboard">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gqe-9C-N06" kind="show" id="pc3-pc-kEI"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-3B-qWw">
                                 <rect key="frame" x="224" y="540" width="135" height="44"/>
                                 <color key="backgroundColor" red="0.67450980390000004" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -91,7 +106,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-Uz-77c">
-                                <rect key="frame" x="132" y="132" width="172" height="116"/>
+                                <rect key="frame" x="172" y="331" width="172" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Wake up fuckwit">
@@ -102,21 +117,10 @@
                                     <segue destination="D51-IL-nnt" kind="show" id="mHz-Pu-4lj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbH-vL-LoE">
-                                <rect key="frame" x="16" y="540" width="135" height="44"/>
-                                <color key="backgroundColor" red="0.67450980390000004" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="4fC-ew-FZv"/>
-                                    <constraint firstAttribute="height" constant="44" id="isG-Te-W6m"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Leaderboard">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="gqe-9C-N06" kind="show" id="pc3-pc-kEI"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrH-md-MdF">
+                                <rect key="frame" x="16" y="61" width="343" height="308"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -134,6 +138,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="AlarmScreen" destination="lrH-md-MdF" id="092-xR-Rh4"/>
                         <outlet property="BadgesButton" destination="pC9-iS-oqk" id="qx5-NA-r47"/>
                         <outlet property="FriendsButton" destination="X65-E6-vqW" id="X0F-hm-FjK"/>
                         <outlet property="LeaderboardButton" destination="PbH-vL-LoE" id="7Bo-36-UKX"/>
@@ -143,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33.75" y="31.690140845070424"/>
+            <point key="canvasLocation" x="32.799999999999997" y="31.03448275862069"/>
         </scene>
         <!--Badges-->
         <scene sceneID="t7b-ap-urg">
