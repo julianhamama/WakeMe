@@ -115,8 +115,9 @@
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="WakeUpFucker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JO0-xV-qwI"/>
                                     <action selector="back:" destination="rvS-ir-06t" eventType="touchUpInside" id="aJO-Os-yv1"/>
-                                    <segue destination="D51-IL-nnt" kind="show" id="mHz-Pu-4lj"/>
+                                    <segue destination="D51-IL-nnt" kind="show" identifier="GameSegue" id="mHz-Pu-4lj"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrH-md-MdF">
@@ -304,7 +305,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="Wake up fuckwit">
+                                <state key="normal" title="Wake Up Challenge">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -346,7 +347,7 @@
                                 </state>
                                 <connections>
                                     <action selector="back:" destination="rvS-ir-06t" eventType="touchUpInside" id="gyh-y0-jic"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="CQx-mt-ncu"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="TheSegue" id="7Cy-CD-czE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -571,6 +572,6 @@
         <image name="home.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HXR-at-9CR"/>
+        <segue reference="7Cy-CD-czE"/>
     </inferredMetricsTieBreakers>
 </document>
