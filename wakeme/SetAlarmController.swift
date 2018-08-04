@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class SetAlarmController: UIViewController {
 
+    var ref: DatabaseReference!
     var timer = Timer();
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -26,6 +28,8 @@ class SetAlarmController: UIViewController {
         SetAlarmButton.layer.shadowColor=UIColor.red.cgColor
         SetAlarmButton.layer.shadowOffset=CGSize(width: 5, height: 5)
         // Do any additional setup after loading the view.
+        
+        ref = Database.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,20 +37,23 @@ class SetAlarmController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func SetAlarmPress(_ sender: UIButton) {
+    @IBAction func setAlarm(_ sender: UIButton) {
         UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.90)}, completion: {finish in UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform.identity})})
-    }
-    
-    @IBAction func setAlarm(_ sender: Any) {
-    
-    @IBAction func setAlarm(_ sender: Any) {
-        let date1 = Date().addingTimeInterval(5)
-        let date2 = Date().addingTimeInterval(7)
-        let timer1 = Timer(fireAt: date1, interval: 0, target: self, selector: #selector(printSomething), userInfo: nil, repeats: false)
-        let timer2 = Timer(fireAt: date2, interval: 0, target: self, selector: #selector(printSomething), userInfo: nil, repeats: false)
+        
+        let date = datePicker.date
+        let dateEpoch = date.timeIntervalSince1970
+        
+        ref.child(
+        
+//        Use this to convert back to normal date from epoch
+//        let date = NSDate(timeIntervalSince1970: 1415637900)
+        
+        
+        //        let timer1 = Timer(fireAt: date1, interval: 0, target: self, selector: #selector(printSomething), userInfo: nil, repeats: false)
+//        let timer2 = Timer(fireAt: date2, interval: 0, target: self, selector: #selector(printSomething), userInfo: nil, repeats: false)
 
-        RunLoop.main.add(timer1, forMode: RunLoopMode.commonModes)
-        RunLoop.main.add(timer2, forMode: RunLoopMode.commonModes)
+//        RunLoop.main.add(timer1, forMode: RunLoopMode.commonModes)
+//        RunLoop.main.add(timer2, forMode: RunLoopMode.commonModes)
 
     }
     
