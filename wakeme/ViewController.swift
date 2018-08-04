@@ -65,6 +65,8 @@ class ViewController: UIViewController {
         
         ref = Database.database().reference()
         
+        jeffTest()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -98,6 +100,42 @@ class ViewController: UIViewController {
         }catch let error as NSError {
             print(error.description)
         }
+    }
+    
+    func jeffTest() {
+        
+        
+        for i in 0...3 {
+            let alarmRect = UIView(frame: CGRect(x: 0, y: i * 110, width: Int(AlarmScreen.frame.size.width), height: 100))
+            alarmRect.layer.cornerRadius = 10
+            alarmRect.backgroundColor = UIColor.gray
+            
+            let alarmTime = UILabel()
+            alarmTime.frame.origin.x = 15
+            alarmTime.frame.origin.y = 15
+            alarmTime.font = alarmTime.font.withSize(24)
+            alarmTime.text = "6:30AM"
+            alarmTime.sizeToFit()
+            alarmRect.addSubview(alarmTime)
+            
+            let descLabel = UILabel()
+            descLabel.frame.origin.x = 15
+            descLabel.frame.origin.y = 50
+            descLabel.font = descLabel.font.withSize(18)
+            alarmRect.addSubview(descLabel)
+            
+            ref.child("john_alarms").child("alarm_1").child("desc").observe(.value, with: { (snapshot) in
+                descLabel.text = snapshot.value as? String
+                descLabel.sizeToFit()
+            })
+            
+            
+            
+            AlarmScreen.addSubview(alarmRect)
+        }
+        
+        
+        AlarmScreen.contentSize = CGSize(width: Int(AlarmScreen.frame.size.width), height: 440)
     }
     
     
