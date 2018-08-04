@@ -13,6 +13,8 @@
 		0066A95121159D46001E0A3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0066A95021159D46001E0A3B /* Assets.xcassets */; };
 		0066A95421159D46001E0A3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0066A95221159D46001E0A3B /* LaunchScreen.storyboard */; };
 		0066A95E2115AFBA001E0A3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0066A95D2115AFBA001E0A3B /* GoogleService-Info.plist */; };
+		0066A9612115B639001E0A3B /* Alarm Sound 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0066A95F2115B639001E0A3B /* Alarm Sound 1.mp3 */; };
+		0066A9622115B639001E0A3B /* Alarm Sound 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0066A9602115B639001E0A3B /* Alarm Sound 2.mp3 */; };
 		16BCD4C5DD96855CBE22218A /* Pods_wakeme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EEB8FD2D285A736ECE0004 /* Pods_wakeme.framework */; };
 		2FAD9DCC2115B2BA008694E1 /* SetAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD9DCB2115B2BA008694E1 /* SetAlarmController.swift */; };
 		2FAD9DCE2115B5DA008694E1 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD9DCD2115B5DA008694E1 /* Leaderboard.swift */; };
@@ -71,6 +73,8 @@
 		0066A94821159D46001E0A3B /* wakeme */ = {
 			isa = PBXGroup;
 			children = (
+				0066A95F2115B639001E0A3B /* Alarm Sound 1.mp3 */,
+				0066A9602115B639001E0A3B /* Alarm Sound 2.mp3 */,
 				0066A94921159D46001E0A3B /* AppDelegate.swift */,
 				0066A94B21159D46001E0A3B /* ViewController.swift */,
 				0066A94D21159D46001E0A3B /* Main.storyboard */,
@@ -164,6 +168,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0066A9612115B639001E0A3B /* Alarm Sound 1.mp3 in Resources */,
+				0066A9622115B639001E0A3B /* Alarm Sound 2.mp3 in Resources */,
 				0066A95421159D46001E0A3B /* LaunchScreen.storyboard in Resources */,
 				0066A95E2115AFBA001E0A3B /* GoogleService-Info.plist in Resources */,
 				0066A95121159D46001E0A3B /* Assets.xcassets in Resources */,
