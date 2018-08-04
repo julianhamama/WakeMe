@@ -30,10 +30,37 @@ class ViewController: UIViewController {
         NewAlarmButton.layer.borderColor=UIColor.clear.cgColor
         NewAlarmButton.layer.shadowColor=UIColor.red.cgColor
         NewAlarmButton.layer.shadowOffset=CGSize(width: 5, height: 5)
-        FriendsButton.layer.cornerRadius=25
-        BadgesButton.layer.cornerRadius=25
-        NewsfeedButton.layer.cornerRadius=25
-        LeaderboardButton.layer.cornerRadius=25
+        
+        FriendsButton.layer.cornerRadius=15
+        FriendsButton.layer.borderWidth=2
+        FriendsButton.layer.shadowOpacity=0.8
+        FriendsButton.layer.borderColor=UIColor.clear.cgColor
+        FriendsButton.layer.shadowColor=UIColor.red.cgColor
+        FriendsButton.layer.shadowOffset=CGSize(width: 5, height: 5)
+        
+        BadgesButton.layer.cornerRadius=15
+        BadgesButton.layer.borderWidth=2
+        BadgesButton.layer.shadowOpacity=0.8
+        BadgesButton.layer.borderColor=UIColor.clear.cgColor
+        BadgesButton.layer.shadowColor=UIColor.red.cgColor
+        BadgesButton.layer.shadowOffset=CGSize(width: 5, height: 5)
+        
+        NewsfeedButton.layer.cornerRadius=15
+        NewsfeedButton.layer.borderWidth=2
+        NewsfeedButton.layer.shadowOpacity=0.8
+        NewsfeedButton.layer.borderColor=UIColor.clear.cgColor
+        NewsfeedButton.layer.shadowColor=UIColor.red.cgColor
+        NewsfeedButton.layer.shadowOffset=CGSize(width: 5, height: 5)
+        
+        LeaderboardButton.layer.cornerRadius=15
+        LeaderboardButton.layer.borderWidth=2
+        LeaderboardButton.layer.shadowOpacity=0.8
+    LeaderboardButton.layer.borderColor=UIColor.clear.cgColor
+        LeaderboardButton.layer.shadowColor=UIColor.red.cgColor
+        LeaderboardButton.layer.shadowOffset=CGSize(width: 5, height: 5)
+        
+        
+        
         
         ref = Database.database().reference()
         
@@ -45,7 +72,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func NewAlarmPress(_ sender: UIButton) {
+        UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.90)}, completion: {finish in UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform.identity})})
+    }
     
     @IBAction func newAlarmAction(_ sender: Any) {
         ViewController.playSound()

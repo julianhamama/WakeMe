@@ -49,6 +49,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="LeaderboardPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TuY-Q5-JFU"/>
                                     <segue destination="gqe-9C-N06" kind="show" id="ubg-ll-AgZ"/>
                                 </connections>
                             </button>
@@ -100,6 +101,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="NewAlarmPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVx-By-n2K"/>
                                     <action selector="newAlarmAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="18N-cy-rth"/>
                                     <segue destination="rvS-ir-06t" kind="show" id="hM1-IE-ax2"/>
                                 </connections>
@@ -327,6 +329,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="SetAlarmPress:" destination="rvS-ir-06t" eventType="touchUpInside" id="tGG-7S-8S4"/>
                                     <action selector="setAlarm:" destination="rvS-ir-06t" eventType="touchUpInside" id="P68-hC-RjB"/>
                                 </connections>
                             </button>
@@ -485,6 +488,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="elm-nd-qzg"/>
+        <segue reference="byf-2B-siR"/>
     </inferredMetricsTieBreakers>
 </document>

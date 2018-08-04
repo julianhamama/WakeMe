@@ -19,6 +19,11 @@ class SetAlarmController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SetAlarmButton.layer.cornerRadius=25
+        SetAlarmButton.layer.borderWidth=2
+        SetAlarmButton.layer.shadowOpacity=0.8
+        SetAlarmButton.layer.borderColor=UIColor.clear.cgColor
+        SetAlarmButton.layer.shadowColor=UIColor.red.cgColor
+        SetAlarmButton.layer.shadowOffset=CGSize(width: 5, height: 5)
         // Do any additional setup after loading the view.
     }
 
@@ -27,7 +32,10 @@ class SetAlarmController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func SetAlarmPress(_ sender: UIButton) {
+        UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.90)}, completion: {finish in UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform.identity})})
+    }
+    
     @IBAction func setAlarm(_ sender: Any) {
     }
     /*
