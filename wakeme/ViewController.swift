@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase
 import AVFoundation
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var AlarmScreen: UIScrollView!
@@ -79,8 +80,11 @@ class ViewController: UIViewController {
         UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.90)}, completion: {finish in UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform.identity})})
     }
     
-    @IBAction func newAlarmAction(_ sender: Any) {
+    @IBAction func WakeUpFucker(_ sender: Any) {
         ViewController.playSound()
+    }
+    @IBAction func newAlarmAction(_ sender: Any) {
+        ViewController.pauseSound()
     }
    
      static func pauseSound() {
@@ -90,7 +94,7 @@ class ViewController: UIViewController {
     }
     
     static func playSound() {
-        let path = Bundle.main.path(forResource: "Alarm Sound 2", ofType: "mp3")!
+        let path = Bundle.main.path(forResource: "Alarm Sound 1", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         
         do{
@@ -101,6 +105,24 @@ class ViewController: UIViewController {
             print(error.description)
         }
     }
+    
+    func alarm(){
+        ViewController.playSound()
+        self.performSegue(withIdentifier: "GameSegue", sender: self)
+    }
+    
+    
+    let alarmDate = Date().addingTimeInterval(30)
+    
+    //func perform(_: alarm, with: nil, afterDelay delay: 30)
+    //func perform(_ aSelector: alarm, with anArgument: nil, afterDelay delay: 30, inModes modes: nil)
+    
+    //let timer = Timer(fireAt: alarmDate, interval: 0, target: self, selector: #selector(alarm), userInfo: nil, repeats: false)
+    // RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+    
+    
+    
+    
     
     func jeffTest() {
         

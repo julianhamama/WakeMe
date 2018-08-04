@@ -17,7 +17,8 @@ class SetAlarmController: UIViewController {
     
     @IBOutlet weak var SetAlarmButton: UIButton!
     @IBAction func back(_ sender: Any) {
-        ViewController.player.stop()
+       //ViewController.player.stop()
+        ViewController.pauseSound()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,7 @@ class SetAlarmController: UIViewController {
         let date = datePicker.date
         let dateEpoch = date.timeIntervalSince1970
         
-        ref.child(
+       
         
 //        Use this to convert back to normal date from epoch
 //        let date = NSDate(timeIntervalSince1970: 1415637900)
@@ -55,8 +56,8 @@ class SetAlarmController: UIViewController {
 //        RunLoop.main.add(timer1, forMode: RunLoopMode.commonModes)
 //        RunLoop.main.add(timer2, forMode: RunLoopMode.commonModes)
 
-    }
     
+    }
     func printSomething() {
         print("something")
     }
