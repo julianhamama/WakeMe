@@ -26,37 +26,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NewAlarmButton.layer.cornerRadius=25
+        NewAlarmButton.layer.cornerRadius=5
         NewAlarmButton.layer.borderWidth=2
-        NewAlarmButton.layer.shadowOpacity=1
+        NewAlarmButton.layer.shadowOpacity=0
         NewAlarmButton.layer.borderColor=UIColor.clear.cgColor
         NewAlarmButton.layer.shadowColor=UIColor.black.cgColor
         NewAlarmButton.layer.shadowOffset=CGSize(width: 5, height: 5)
         
-        FriendsButton.layer.cornerRadius=15
+        FriendsButton.layer.cornerRadius=5
         FriendsButton.layer.borderWidth=2
-        FriendsButton.layer.shadowOpacity=1
+        FriendsButton.layer.shadowOpacity=0
         FriendsButton.layer.borderColor=UIColor.clear.cgColor
         FriendsButton.layer.shadowColor=UIColor.black.cgColor
         FriendsButton.layer.shadowOffset=CGSize(width: 5, height: 5)
         
-        BadgesButton.layer.cornerRadius=15
+        BadgesButton.layer.cornerRadius=5
         BadgesButton.layer.borderWidth=2
-        BadgesButton.layer.shadowOpacity=1
+        BadgesButton.layer.shadowOpacity=0
         BadgesButton.layer.borderColor=UIColor.clear.cgColor
         BadgesButton.layer.shadowColor=UIColor.black.cgColor
         BadgesButton.layer.shadowOffset=CGSize(width: 5, height: 5)
         
-        NewsfeedButton.layer.cornerRadius=15
+        NewsfeedButton.layer.cornerRadius=5
         NewsfeedButton.layer.borderWidth=2
-        NewsfeedButton.layer.shadowOpacity=1
+        NewsfeedButton.layer.shadowOpacity=0
         NewsfeedButton.layer.borderColor=UIColor.clear.cgColor
         NewsfeedButton.layer.shadowColor=UIColor.black.cgColor
         NewsfeedButton.layer.shadowOffset=CGSize(width: 5, height: 5)
         
-        LeaderboardButton.layer.cornerRadius=15
+        LeaderboardButton.layer.cornerRadius=5
         LeaderboardButton.layer.borderWidth=2
-        LeaderboardButton.layer.shadowOpacity=1
+        LeaderboardButton.layer.shadowOpacity=0
     LeaderboardButton.layer.borderColor=UIColor.clear.cgColor
         LeaderboardButton.layer.shadowColor=UIColor.black.cgColor
         LeaderboardButton.layer.shadowOffset=CGSize(width: 5, height: 5)
@@ -208,7 +208,7 @@ class ViewController: UIViewController {
         ref.child("bob_alarm").child("confirmed").observe(.value, with: { (snapshot) in
             let temp = snapshot.value as? String
             
-            print(temp)
+            print(temp ?? "nil")
             
             if (temp == "0") {
                 self.ref.child("bob_alarm").child("confirmed").setValue("1")
