@@ -42,7 +42,7 @@ class SetAlarmController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         Friend.text = myPickerData[row]
         self.view.endEditing(true)
     }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         SetAlarmButton.layer.cornerRadius=25
@@ -57,6 +57,9 @@ class SetAlarmController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         Friend.inputView = thePicker
         thePicker.delegate = self
+        
+       
+        
   
     }
 

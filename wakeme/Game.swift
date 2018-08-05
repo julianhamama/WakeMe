@@ -19,25 +19,53 @@ class Game: UIViewController {
     var databaseHandle:DatabaseHandle?
    // public static var player: AVAudioPlayer!
     
-    @objc func buttonDown(_ sender: UIButton) {
-        Button2.backgroundColor = UIColor.green
-        ref.child("buttonStatus").child("Button2").setValue("in")
-    }
-    
-    @objc func buttonUp(_ sender: UIButton) {
-        Button2.backgroundColor = UIColor.gray
-        ref.child("buttonStatus").child("Button2").setValue("out")
-    }
-    
     @objc func buttonDownOther(_ sender: UIButton) {
-        Button1.backgroundColor = UIColor.green
-        //print("bang")
+//        Button1.backgroundColor = UIColor.green
         ref.child("buttonStatus").child("Button1").setValue("in")
     }
     
     @objc func buttonUpOther(_ sender: UIButton) {
-        Button1.backgroundColor = UIColor.blue
+//        Button1.backgroundColor = UIColor.blue
         ref.child("buttonStatus").child("Button1").setValue("out")
+    }
+    
+    @objc func buttonDown(_ sender: UIButton) {
+//        Button2.backgroundColor = UIColor.green
+        ref.child("buttonStatus").child("Button2").setValue("in")
+    }
+    
+    @objc func buttonUp(_ sender: UIButton) {
+//        Button2.backgroundColor = UIColor.gray
+        ref.child("buttonStatus").child("Button2").setValue("out")
+    }
+ 
+    
+    func jeffsHelper1(timer: Timer){
+        var post1: String = "poo"
+        var post2: String = "poo"
+        
+        databaseHandle = ref.child("buttonStatus").child("Button1").observe(.value, with: { (snapShot) in
+            post1 = snapShot.value as! String
+            if(post1 == "in"){
+                self.Button1.backgroundColor = UIColor.green
+            } else {
+                self.Button1.backgroundColor = UIColor.red
+            }
+        })
+        
+        databaseHandle = ref.child("buttonStatus").child("Button2").observe(.value, with: { (snapShot) in
+            post2 = snapShot.value as! String
+            if(post2 == "in"){
+                self.Button2.backgroundColor = UIColor.green
+            } else {
+                self.Button2.backgroundColor = UIColor.red
+            }
+        })
+        if(post1 == "in" && post2 == "in"){
+            ViewController.player.pause()
+            self.performSegue(withIdentifier: "TheSegue", sender: self)
+        }
+
     }
     
     override func viewDidLoad() {
@@ -54,27 +82,32 @@ class Game: UIViewController {
         ref = Database.database().reference()
         
         // Do any additional setup after loading the view, typically from a nib.
-        
-        databaseHandle = ref.child("buttonStatus").child("Button1").observe(.value, with: { (snapShot) in
-            
-            //code to execte when the data base under yeet is updated.
-            let post = snapShot.value as? String
-            //if post == "in"{
-                //print("bang")
-                self.databaseHandle = self.ref.child("buttonStatus").child("Button2").observe(.value, with: { (snapShot) in
-                    let post2 = snapShot.value as? String
-                    if post2 == "in" && post == "in"{
-                        self.ref.child("buttonStatus").child("Button1").setValue("out")
-                        self.ref.child("buttonStatus").child("Button2").setValue("out")
-                        ViewController.player.pause()
-                        self.performSegue(withIdentifier: "TheSegue", sender: self)
-                    }
-                })
-           // }
-            
-           
-            
-        })
+//        
+//        databaseHandle = ref.child("buttonStatus").child("Button1").observe(.value, with: { (snapShot) in
+//            
+//            //code to execte when the data base under yeet is updated.
+//            let post = snapShot.value as? String
+//            //if post == "in"{
+//                //print("bang")
+//                self.databaseHandle = self.ref.child("buttonStatus").child("Button2").observe(.value, with: { (snapShot) in
+//                    let post2 = snapShot.value as? String
+//                    if post2 == "in" && post == "in"{
+//                        self.ref.child("buttonStatus").child("Button1").setValue("out")
+//                        self.ref.child("buttonStatus").child("Button2").setValue("out")
+//                        ViewController.player.pause()
+//                        self.performSegue(withIdentifier: "TheSegue", sender: self)
+//                    }
+//                })
+//           // }
+//            
+//           
+//            
+//        })
+//        
+        _ = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) {
+            timer in
+            self.jeffsHelper1(timer: timer)
+        }
         
         // Do any additional setup after loading the view.
     }
