@@ -110,21 +110,6 @@
                                     <segue destination="rvS-ir-06t" kind="show" id="hM1-IE-ax2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-Uz-77c">
-                                <rect key="frame" x="172" y="392" width="176" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.034296651479754026" green="0.79310809644472235" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Wake up fuckwit">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="WakeUpFucker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JO0-xV-qwI"/>
-                                    <action selector="back:" destination="rvS-ir-06t" eventType="touchUpInside" id="aJO-Os-yv1"/>
-                                    <segue destination="D51-IL-nnt" kind="show" identifier="GameSegue" id="mHz-Pu-4lj"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrH-md-MdF">
                                 <rect key="frame" x="16" y="61" width="343" height="308"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -236,7 +221,7 @@
                                 </state>
                                 <connections>
                                     <action selector="back:" destination="rvS-ir-06t" eventType="touchUpInside" id="o3N-JG-SAn"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="l6f-Bm-8pc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Zng-vB-TR1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -342,19 +327,6 @@
                                     <action selector="Button1Press:" destination="D51-IL-nnt" eventType="touchUpInside" id="jbG-W6-Al7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0K-FT-sLh">
-                                <rect key="frame" x="107" y="357" width="161" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="Button 2">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="ButtonPress2:" destination="D51-IL-nnt" eventType="touchUpInside" id="tWt-fk-wht"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7k-Hn-mr2">
                                 <rect key="frame" x="16" y="35" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -365,6 +337,19 @@
                                 <connections>
                                     <action selector="back:" destination="rvS-ir-06t" eventType="touchUpInside" id="gyh-y0-jic"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="TheSegue" id="7Cy-CD-czE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0K-FT-sLh">
+                                <rect key="frame" x="107" y="356" width="161" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Button 2">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.70820432779999998" green="0.0" blue="0.107621831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonPress2:" destination="D51-IL-nnt" eventType="touchUpInside" id="tWt-fk-wht"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -400,6 +385,7 @@
                                 </state>
                                 <connections>
                                     <action selector="setAlarm:" destination="rvS-ir-06t" eventType="touchUpInside" id="eug-a9-o4k"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Mm4-nb-3GW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZI-NT-U3a">
@@ -439,7 +425,7 @@
                                 </state>
                                 <connections>
                                     <action selector="back:" destination="rvS-ir-06t" eventType="touchUpInside" id="k7w-O9-1ds"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="elm-nd-qzg"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="AxM-o2-J3Z"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-gt-30o">
@@ -596,6 +582,6 @@
         <image name="home.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="elm-nd-qzg"/>
+        <segue reference="Zng-vB-TR1"/>
     </inferredMetricsTieBreakers>
 </document>

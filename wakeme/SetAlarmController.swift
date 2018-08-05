@@ -76,8 +76,10 @@ class SetAlarmController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBAction func setAlarm(_ sender: UIButton) {
         UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.90)}, completion: {finish in UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform.identity})})
         
-        let date = datePicker.date
-        var dateEpoch = date.timeIntervalSince1970
+        var date = datePicker.date
+        let timeInterval = floor(date .timeIntervalSinceReferenceDate / 60.0) * 60.0
+        date = NSDate(timeIntervalSinceReferenceDate: timeInterval) as Date
+        let dateEpoch = date.timeIntervalSince1970
         
         ref.child("bob_alarm").child("date").setValue(dateEpoch.description)
         ref.child("bob_alarm").child("friend").setValue(Friend.text)

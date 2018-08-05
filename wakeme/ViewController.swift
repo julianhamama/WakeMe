@@ -174,7 +174,7 @@ class ViewController: UIViewController {
                 let myString = formatter.string(from: date)
                 alarmTime.text = myString
                 alarmTime.sizeToFit()
-                let date2 = Date().addingTimeInterval(5)
+                let date2 = Date().addingTimeInterval(10)
                 
                 let timer1 = Timer(fireAt: date, interval: 0, target: self, selector: #selector(self.alarm), userInfo: nil, repeats: false)
                 RunLoop.main.add(timer1, forMode: RunLoopMode.commonModes)
@@ -232,7 +232,11 @@ class ViewController: UIViewController {
                 alarmRect.addSubview(alarmTime)
                 
                 self.ref.child("bob_alarm").child("date").observe(.value, with: { (snapshot) in
-                    alarmTime.text = snapshot.value as? String
+                    let date = Date(timeIntervalSince1970: Double(snapshot.value as! String)!)
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "MM-dd HH:mm"
+                    let myString = formatter.string(from: date)
+                    alarmTime.text = myString
                     alarmTime.sizeToFit()
                 })
                 
