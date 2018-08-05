@@ -9,8 +9,13 @@
 import UIKit
 import FirebaseDatabase
 
-class SetAlarmController: UIViewController {
+class SetAlarmController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    let myPickerData = [String](arrayLiteral: "John", "Bob", "Jimbo")
 
+    @IBOutlet weak var Description: UITextField!
+    @IBOutlet weak var Friend: UITextField!
+    let thePicker = UIPickerView()
     var ref: DatabaseReference!
     var timer = Timer();
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -19,6 +24,24 @@ class SetAlarmController: UIViewController {
     @IBAction func back(_ sender: Any) {
         ViewController.player.stop()
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return myPickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return myPickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        Friend.text = myPickerData[row]
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SetAlarmButton.layer.cornerRadius=25
@@ -30,8 +53,17 @@ class SetAlarmController: UIViewController {
         // Do any additional setup after loading the view.
         
         ref = Database.database().reference()
+        
+        Friend.inputView = thePicker
+        thePicker.delegate = self
+  
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,9 +73,15 @@ class SetAlarmController: UIViewController {
         UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.90)}, completion: {finish in UIButton.animate(withDuration: 0.2, animations: { sender.transform = CGAffineTransform.identity})})
         
         let date = datePicker.date
-        let dateEpoch = date.timeIntervalSince1970
+        var dateEpoch = date.timeIntervalSince1970
         
-        ref.child(
+        ref.child("bob_alarm").child("date").setValue(dateEpoch.description)
+        ref.child("bob_alarm").child("friend").setValue(Friend.text)
+        ref.child("bob_alarm").child("desc").setValue(Description.text)
+        ref.child("bob_alarm").child("confirmed").setValue("0")
+        
+        
+//        ref.child(
         
 //        Use this to convert back to normal date from epoch
 //        let date = NSDate(timeIntervalSince1970: 1415637900)
