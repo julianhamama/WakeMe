@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var NewsfeedButton: UIButton!
     @IBOutlet weak var LeaderboardButton: UIButton!
     var ref: DatabaseReference!
+    var timer = Timer()
     public static var player: AVAudioPlayer!
     
     override func viewDidLoad() {
@@ -110,17 +111,8 @@ class ViewController: UIViewController {
     func alarm(){
         ViewController.playSound()
         self.performSegue(withIdentifier: "GameSegue", sender: self)
+        ref.child("bob_alarm").removeValue()
     }
-    
-    
-    let alarmDate = Date().addingTimeInterval(30)
-    
-    //func perform(_: alarm, with: nil, afterDelay delay: 30)
-    //func perform(_ aSelector: alarm, with anArgument: nil, afterDelay delay: 30, inModes modes: nil)
-    
-    //let timer = Timer(fireAt: alarmDate, interval: 0, target: self, selector: #selector(alarm), userInfo: nil, repeats: false)
-    // RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
-    
     
     
     
@@ -171,9 +163,24 @@ class ViewController: UIViewController {
         alarmTime.font = alarmTime.font.withSize(24)
         alarmRect.addSubview(alarmTime)
         
+        
+        
         self.ref.child("bob_alarm").child("date").observe(.value, with: { (snapshot) in
-            alarmTime.text = snapshot.value as? String
-            alarmTime.sizeToFit()
+            let dateString = snapshot.value as? String
+            if(dateString != nil){
+                let date = Date(timeIntervalSince1970: Double(dateString!)!)
+                let formatter = DateFormatter()
+                formatter.dateFormat = "MM-dd HH:mm"
+                let myString = formatter.string(from: date)
+                alarmTime.text = myString
+                alarmTime.sizeToFit()
+                let date2 = Date().addingTimeInterval(5)
+                
+                let timer1 = Timer(fireAt: date, interval: 0, target: self, selector: #selector(self.alarm), userInfo: nil, repeats: false)
+                RunLoop.main.add(timer1, forMode: RunLoopMode.commonModes)
+            }
+            
+            
         })
         
         let descLabel = UILabel()
@@ -183,6 +190,7 @@ class ViewController: UIViewController {
         alarmRect.addSubview(descLabel)
         
         self.ref.child("bob_alarm").child("desc").observe(.value, with: { (snapshot) in
+            
             descLabel.text = snapshot.value as? String
             descLabel.sizeToFit()
         })

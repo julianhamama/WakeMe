@@ -13,8 +13,8 @@ class SetAlarmController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     let myPickerData = [String](arrayLiteral: "John", "Bob", "Jimbo")
 
-    @IBOutlet weak var Description: UITextField!
     @IBOutlet weak var Friend: UITextField!
+    @IBOutlet weak var Description: UITextField!
     let thePicker = UIPickerView()
     var ref: DatabaseReference!
     var timer = Timer();
