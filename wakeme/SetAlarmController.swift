@@ -22,7 +22,8 @@ class SetAlarmController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBOutlet weak var SetAlarmButton: UIButton!
     @IBAction func back(_ sender: Any) {
-        ViewController.player.stop()
+       //ViewController.player.stop()
+        ViewController.pauseSound()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -93,8 +94,8 @@ class SetAlarmController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 //        RunLoop.main.add(timer1, forMode: RunLoopMode.commonModes)
 //        RunLoop.main.add(timer2, forMode: RunLoopMode.commonModes)
 
-    }
     
+    }
     func printSomething() {
         print("something")
     }
